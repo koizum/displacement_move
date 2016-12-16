@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>displacement</title>
+    <style>
+        * {
+            overflow: hidden;
+        }
+
+        #displ {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        #button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #video {
+            display: none;
+        }
+    </style>
+    <script src="js/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="displ"></div>
+    <div id="button">
+        <input type="button" value="はじめから" onclick="video.load();" />
+        <input type="button" value="再生" onclick="video.play();" />
+        <input type="button" value="一時停止" onclick="video.pause();" />
+    </div>
+    <video id="video" src="001.mp4" autoplay loop playsinline muted></video>
+</body>
+
+</html>
